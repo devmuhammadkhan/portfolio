@@ -1,0 +1,154 @@
+/* ============================================================
+   CONTACT.CSS — Contact Portal (Desktop)
+   ============================================================ */
+
+.navbar .nav-links a.active { color: var(--primary-orange); }
+.navbar .nav-links a.active::after { transform: scaleX(1); }
+
+.portal-section {
+    min-height: 100vh;
+    padding: calc(var(--nav-height) + 5rem) 6rem 5rem;
+    max-width: 760px;
+}
+
+.portal-badge {
+    font-family: var(--font-accent);
+    color: var(--primary-orange);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    padding-left: 3.5rem;
+    position: relative;
+    display: inline-block;
+}
+.portal-badge::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    width: 2.5rem; height: 1px;
+    background: var(--primary-orange);
+}
+
+.portal-title {
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin: 1.75rem 0 1.5rem;
+}
+.highlight-orange { color: var(--primary-orange); }
+.portal-sub {
+    font-family: var(--font-display);
+    font-size: 0.45em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.portal-intro {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-bottom: 3.5rem;
+    border-left: 2px solid rgba(249, 115, 22, 0.4);
+    padding-left: 1.25rem;
+}
+.portal-intro .hl { color: var(--primary-orange); font-weight: 600; }
+
+/* ---------- Form ---------- */
+.portal-form { display: flex; flex-direction: column; }
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 2.25rem;
+}
+.form-field label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.label-opt { color: var(--border-hairline); font-weight: 400; }
+
+.form-field input,
+.form-field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-hairline);
+    border-radius: 0;
+    color: var(--text-main);
+    font-family: var(--font-primary);
+    font-size: 1.15rem;
+    font-weight: 300;
+    padding: 0.8rem 0;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+.form-field input:focus,
+.form-field textarea:focus { border-bottom-color: var(--primary-orange); }
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #D6D3D1; }
+
+.btn-send {
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.btn-send:active { transform: translateY(0); }
+
+.form-note {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--orange-deep);
+}
+
+/* ---------- Architecture pipeline ---------- */
+.portal-pipeline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 2.5rem;
+    padding: 1.1rem 1.4rem;
+    border: 1px solid var(--border-hairline);
+    background: var(--surface-soft);
+    width: fit-content;
+}
+.pipe-step {
+    font-family: var(--font-accent);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+.pipe-step.hl { color: var(--primary-orange); font-weight: 700; }
+.pipe-arrow { color: var(--primary-orange); font-size: 0.9rem; }
+
+/* ---------- Direct links ---------- */
+.portal-alt {
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-hairline);
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.footer-back {
+    text-decoration: none;
+    color: var(--primary-orange);
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .portal-section { padding: calc(var(--nav-height) + 3rem) 2rem 4rem; }
+    .portal-alt { gap: 2.5rem; }
+}

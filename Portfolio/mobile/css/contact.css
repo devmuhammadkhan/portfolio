@@ -1,0 +1,148 @@
+/* ============================================================
+   CONTACT.CSS — Contact Portal (Mobile)
+   ============================================================ */
+
+.m-back {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 0.55rem 0;
+    transition: color 0.3s ease;
+}
+.m-back:active { color: var(--primary-orange); }
+
+.m-portal {
+    min-height: 100dvh;
+    padding: calc(var(--header-height) + 3rem) 1.5rem 3rem;
+}
+
+.portal-badge {
+    font-family: var(--font-accent);
+    color: var(--primary-orange);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    padding-left: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+.portal-badge::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    width: 1.6rem; height: 1px;
+    background: var(--primary-orange);
+}
+
+.portal-title {
+    font-size: clamp(2rem, 9vw, 2.9rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-main);
+    margin: 1.5rem 0 1.25rem;
+}
+.highlight-orange { color: var(--primary-orange); }
+.portal-sub {
+    font-family: var(--font-display);
+    font-size: 0.45em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.portal-intro {
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    border-left: 2px solid rgba(249, 115, 22, 0.4);
+    padding-left: 1.25rem;
+}
+.portal-intro .hl { color: var(--primary-orange); font-weight: 600; }
+
+/* ---------- Form ---------- */
+.portal-form { display: flex; flex-direction: column; }
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.form-field label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.label-opt { color: var(--border-hairline); font-weight: 400; }
+
+.form-field input,
+.form-field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-hairline);
+    border-radius: 0;
+    color: var(--text-main);
+    font-family: var(--font-primary);
+    font-size: 1.05rem;
+    font-weight: 300;
+    padding: 0.7rem 0;
+    outline: none;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+.form-field input:focus,
+.form-field textarea:focus { border-bottom-color: var(--primary-orange); }
+.form-field input::placeholder,
+.form-field textarea::placeholder { color: #D6D3D1; }
+
+.btn-send { border: none; cursor: pointer; }
+.btn-send:active { transform: translateY(0); }
+
+.form-note {
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--orange-deep);
+}
+
+/* ---------- Architecture pipeline ---------- */
+.portal-pipeline {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid var(--border-hairline);
+    background: var(--surface-soft);
+    width: fit-content;
+}
+.pipe-step {
+    font-family: var(--font-accent);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+.pipe-step.hl { color: var(--primary-orange); font-weight: 700; }
+.pipe-arrow { color: var(--primary-orange); font-size: 0.85rem; }
+
+/* ---------- Direct links ---------- */
+.portal-alt {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-hairline);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.site-footer a { color: var(--primary-orange); }
